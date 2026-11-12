@@ -1,0 +1,179 @@
+{
+    "scan_time": "2026-11-12T19:54:50.792521",
+    "total_logs_processed": 440,
+    "total_incidents": 15,
+    "attacker_intelligence": {
+        "118.25.6.39": {
+            "country": "China",
+            "isp": "Shenzhen Tencent Computer Systems Company Limited",
+            "org": "Tencent Cloud Computing (Beijing) Co., Ltd"
+        },
+        "89.248.165.1": {
+            "country": "The Netherlands",
+            "isp": "IP Volume inc",
+            "org": "Quasi Networks LTD."
+        },
+        "45.33.32.156": {
+            "country": "United States",
+            "isp": "Akamai Technologies, Inc.",
+            "org": "Linode"
+        },
+        "185.220.101.1": {
+            "country": "Germany",
+            "isp": "Stiftung Erneuerbare Freiheit",
+            "org": "Artikel10 e.V"
+        }
+    },
+    "incidents": [
+        {
+            "timestamp": "12/Nov/2026:18:39:52 +0000",
+            "source_ip": "45.33.32.156",
+            "attack_type": "SQL Injection (SQLi)",
+            "mitre_tactic": "T1190 - Exploit Public-Facing Application (Initial Access)",
+            "http_method": "GET",
+            "http_status": 500,
+            "evidence": "/products.php?id=1; DROP TABLE users--",
+            "line_number": 208
+        },
+        {
+            "timestamp": "12/Nov/2026:18:39:57 +0000",
+            "source_ip": "45.33.32.156",
+            "attack_type": "SQL Injection (SQLi)",
+            "mitre_tactic": "T1190 - Exploit Public-Facing Application (Initial Access)",
+            "http_method": "GET",
+            "http_status": 500,
+            "evidence": "/products.php?id=1 UNION SELECT username, password FROM users--",
+            "line_number": 209
+        },
+        {
+            "timestamp": "12/Nov/2026:18:40:02 +0000",
+            "source_ip": "45.33.32.156",
+            "attack_type": "SQL Injection (SQLi)",
+            "mitre_tactic": "T1190 - Exploit Public-Facing Application (Initial Access)",
+            "http_method": "GET",
+            "http_status": 500,
+            "evidence": "/login.php?user=admin'--&pass=123",
+            "line_number": 211
+        },
+        {
+            "timestamp": "12/Nov/2026:19:04:47 +0000",
+            "source_ip": "118.25.6.39",
+            "attack_type": "Directory Traversal",
+            "mitre_tactic": "T1083 - File and Directory Discovery (Discovery)",
+            "http_method": "GET",
+            "http_status": 403,
+            "evidence": "/download.php?file=../../etc/passwd",
+            "line_number": 311
+        },
+        {
+            "timestamp": "12/Nov/2026:19:04:51 +0000",
+            "source_ip": "118.25.6.39",
+            "attack_type": "Directory Traversal",
+            "mitre_tactic": "T1083 - File and Directory Discovery (Discovery)",
+            "http_method": "GET",
+            "http_status": 403,
+            "evidence": "/download.php?file=../../../../etc/shadow",
+            "line_number": 312
+        },
+        {
+            "timestamp": "12/Nov/2026:19:04:55 +0000",
+            "source_ip": "118.25.6.39",
+            "attack_type": "Directory Traversal",
+            "mitre_tactic": "T1083 - File and Directory Discovery (Discovery)",
+            "http_method": "GET",
+            "http_status": 403,
+            "evidence": "/view.php?page=..%2F..%2F..%2Fetc%2Fpasswd",
+            "line_number": 313
+        },
+        {
+            "timestamp": "12/Nov/2026:19:29:47 +0000",
+            "source_ip": "89.248.165.1",
+            "attack_type": "Automated Security Scanner",
+            "mitre_tactic": "T1595 - Active Scanning (Reconnaissance)",
+            "http_method": "GET",
+            "http_status": 404,
+            "evidence": "Mozilla/5.00 (Nikto/2.1.6)",
+            "line_number": 414
+        },
+        {
+            "timestamp": "12/Nov/2026:19:29:50 +0000",
+            "source_ip": "89.248.165.1",
+            "attack_type": "Automated Security Scanner",
+            "mitre_tactic": "T1595 - Active Scanning (Reconnaissance)",
+            "http_method": "GET",
+            "http_status": 404,
+            "evidence": "sqlmap/1.7.2#stable (https://sqlmap.org)",
+            "line_number": 415
+        },
+        {
+            "timestamp": "12/Nov/2026:19:29:53 +0000",
+            "source_ip": "89.248.165.1",
+            "attack_type": "Automated Security Scanner",
+            "mitre_tactic": "T1595 - Active Scanning (Reconnaissance)",
+            "http_method": "GET",
+            "http_status": 404,
+            "evidence": "sqlmap/1.7.2#stable (https://sqlmap.org)",
+            "line_number": 416
+        },
+        {
+            "timestamp": "12/Nov/2026:19:29:56 +0000",
+            "source_ip": "89.248.165.1",
+            "attack_type": "Automated Security Scanner",
+            "mitre_tactic": "T1595 - Active Scanning (Reconnaissance)",
+            "http_method": "GET",
+            "http_status": 404,
+            "evidence": "Mozilla/5.00 (Nikto/2.1.6)",
+            "line_number": 417
+        },
+        {
+            "timestamp": "12/Nov/2026:19:29:59 +0000",
+            "source_ip": "89.248.165.1",
+            "attack_type": "Automated Security Scanner",
+            "mitre_tactic": "T1595 - Active Scanning (Reconnaissance)",
+            "http_method": "GET",
+            "http_status": 404,
+            "evidence": "Mozilla/5.00 (Nikto/2.1.6)",
+            "line_number": 418
+        },
+        {
+            "timestamp": "12/Nov/2026:19:30:02 +0000",
+            "source_ip": "89.248.165.1",
+            "attack_type": "Automated Security Scanner",
+            "mitre_tactic": "T1595 - Active Scanning (Reconnaissance)",
+            "http_method": "GET",
+            "http_status": 404,
+            "evidence": "sqlmap/1.7.2#stable (https://sqlmap.org)",
+            "line_number": 420
+        },
+        {
+            "timestamp": "12/Nov/2026:19:30:05 +0000",
+            "source_ip": "89.248.165.1",
+            "attack_type": "Automated Security Scanner",
+            "mitre_tactic": "T1595 - Active Scanning (Reconnaissance)",
+            "http_method": "GET",
+            "http_status": 404,
+            "evidence": "Mozilla/5.00 (Nikto/2.1.6)",
+            "line_number": 421
+        },
+        {
+            "timestamp": "12/Nov/2026:19:30:08 +0000",
+            "source_ip": "89.248.165.1",
+            "attack_type": "Automated Security Scanner",
+            "mitre_tactic": "T1595 - Active Scanning (Reconnaissance)",
+            "http_method": "GET",
+            "http_status": 404,
+            "evidence": "Mozilla/5.00 (Nikto/2.1.6)",
+            "line_number": 422
+        },
+        {
+            "timestamp": "Multiple (Burst)",
+            "source_ip": "185.220.101.1",
+            "attack_type": "Credential Brute-Force Attack",
+            "mitre_tactic": "T1110 - Brute Force (Credential Access)",
+            "http_method": "POST",
+            "http_status": 401,
+            "evidence": "25 failed login attempts on /login.php",
+            "line_number": "Multiple"
+        }
+    ]
+}
